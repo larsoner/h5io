@@ -197,7 +197,7 @@ def _triage_write(
     if key != title and "/" in key:
         if slash == "error":
             raise ValueError(
-                'Found a key with "/", ' "this is not allowed if slash == error"
+                f'Found a key with "/", this is not allowed if slash == error: {key}'
             )
         elif slash == "replace":
             # Auto-replace keys with proper values
